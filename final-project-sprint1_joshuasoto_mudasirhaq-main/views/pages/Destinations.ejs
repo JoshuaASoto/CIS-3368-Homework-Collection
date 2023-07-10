@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+<!-- Prints destinaion table, loops a card for each line -->
+        <% locals.dests.forEach(function(dest) { %>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                    <li> Destination Id: <%=dest.id %> </li>
+                    <li> Country: <%= dest.country %> </li>
+                    <li> City: <%= dest.city %> </li>
+                    <li> Sightseeing: <%= dest.sightseeing %> </li>
+
+                    
+        <% }); %> 
+                    </div>
+                </div>
+            </div>
+    
+                
+    
+    </main>
+
+
+</body>
+</html>

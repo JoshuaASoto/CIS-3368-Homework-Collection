@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1 {text-align: center;}
+</style>
+
+<head>
+    <link rel="stylesheet" href="/css/pizazz.css" type="text/css"/>
+    <%- include('../partials/head'); %>
+</head>
+<!-- Simple login form, directs to home page with right credentials  -->
+<body>
+    <div class="jumbotron vertical-center">
+        <div class = "container">
+            <form class="form" method="POST" id="login" action="/proccessform" >
+                <h1>User Log In</h1>
+                <div class="form mb-4">
+                    <p>Username</p>
+                    <input type="text" name="username" id="username" class="form__input mb-2" placeholder="Username" autofocus>
+                    <p>Password</p>
+                    <input type="text" name="password" id="password" class="form__input mb-2" placeholder="Password">
+                </div>
+                <div>
+                    <input class="button" id="btn" type="submit" > username is username, password is password</input>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

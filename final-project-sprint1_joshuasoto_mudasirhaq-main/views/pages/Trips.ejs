@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+<!-- Prints trip table, loops a card for each line -->
+        <% locals.trips.forEach(function(trip) { %>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <li>Trip Id: <%=trip.id %> </li>
+                        <li>Destination: <%= trip.destinationid %></li>
+                        <li>Transport: <%= trip.transportation %> </li>
+                        <li>Start Date: <%= trip.startdate %> </li>
+                        <li>End date: <%= trip.enddate %> </li>
+                        <li>Trip Name: <%= trip.tripname %>  </li>
+        <% }); %> 
+                    </div>
+                </div>
+            </div>
+    
+                
+    
+    </main>
+
+
+</body>
+</html>

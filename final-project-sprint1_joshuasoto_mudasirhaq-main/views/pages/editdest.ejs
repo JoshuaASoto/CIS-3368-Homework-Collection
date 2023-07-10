@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+<!-- CRUD operations kept in forms on the same row -->
+<main>
+    <h1>Add or Edit Destinations here:</h1>
+    <br>
+    <p>Click destinations to view all destinations.</p>
+    <br>
+    <!-- Each Crud action is kept in a seperate form -->
+    <!-- Add Crud -->
+        <div class="row">
+            <div class="col-sm-4">
+            <form action="/addDestination" method="post" class="jumbotron">
+            <label>Add a country:</label><br>
+            <input type="text" id="addco" name="addco"><br>
+            <label>Add a city:</label><br>
+            <input type="text" id="addci" name="addci"><br>
+            <label>Add a sightseeing:</label><br>
+            <input type="text" id="addsi" name="addsi"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Add destination</button>
+            <br>
+            </form>
+            <br>
+            </div>
+    <!-- Edit Crud -->
+            <div class="col-sm-4">
+            <form action="/editDestination" method="post" class="jumbotron">
+            <label>Update a destination ID:</label><br>
+            <input type="text" id="updatei" name="updatei"><br>
+            <label>Update a country:</label><br>
+            <input type="text" id="updateco" name="updateco"><br>
+            <label>Update a city:</label><br>
+            <input type="text" id="updateci" name="updateci"><br>
+            <label>Update a sightseeing:</label><br>
+            <input type="text" id="updatesi" name="updatesi"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Update destination</button>
+            <br>
+            </form>
+            <br>
+        <!-- Delete Crud -->
+            </div>
+            <div class="col-sm-4">
+            <form action="/deleteDestination" method="post" class="jumbotron">
+            <label>Delete a Destination by ID:</label><br>
+            <input type="text" id="deletei" name="deletei"> <br>
+            <br>
+            <button type="sumbit" class="btn btn-primary">Delete destination</button>
+            </form>
+            <br>
+            </div>
+        </div>
+</main>
+
+</body>
+</html>
+<!-- REFERENCE BOOTSTRAP bootswatch.com/cerulean -->

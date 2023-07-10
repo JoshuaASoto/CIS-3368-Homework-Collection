@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+<!-- CRUD operations kept in forms on the same row -->
+<main>
+    <h1>Add or Edit trips here:</h1>
+    <br>
+    <p>Click trips to view all trips.</p>
+    <p>Note: Dates must entered as YYYY-MM-DD format</p>
+    <br>
+    <!-- Each Crud action is kept in a seperate form -->
+    <!-- Add Crud -->
+        <div class="row">
+            <div class="col-sm-4">
+            <form action="/addTrip" method="post" class="jumbotron">
+            <label>Select Destination ID</label><br>
+            <input type="text" id="addid" name="addid"><br>
+            <label>Choose transportation type:</label><br>
+            <input type="text" id="addt" name="addt"><br>
+            <label>Choose start date:</label><br>
+            <input type="text" id="adds" name="adds"><br>
+            <label>Choose end date:</label><br>
+            <input type="text" id="adde" name="adde"><br>
+            <label>Choose a trip name:</label><br>
+            <input type="text" id="addn" name="addn"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Add trip</button>
+            <br>
+            </form>
+            <br>
+            </div>
+        <!-- Edit Crud -->
+            <div class="col-sm-4">
+            <form action="/editTrip" method="post" class="jumbotron">
+            <label>Select Trip ID</label><br>
+            <input type="text" id="updateid" name="updateid"><br>
+            <label>Update a destination ID:</label><br>
+            <input type="text" id="updatedi" name="updatedi"><br>
+            <label>Update a transportation type:</label><br>
+            <input type="text" id="updatet" name="updatet"><br>
+            <label>Update a start date:</label><br>
+            <input type="text" id="updates" name="updates"><br>
+            <label>Update an end date:</label><br>
+            <input type="text" id="updatee" name="updatee"><br>
+            <label>Update a trip name:</label><br>
+            <input type="text" id="updaten" name="updaten"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Update trip</button>
+            </form>
+            <br>
+            </div>
+        <!-- Delete Crud -->
+            <div class="col-sm-4">
+            <form action="/deleteTrip" method="post" class="jumbotron">
+            <label>Delete a Trip by ID:</label><br>
+            <input type="text" id="delete" name="delete"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Delete trip</button>
+            </form>
+            <br>
+            </div>
+        </div>
+</main>
+
+</body>
+</html>
+<!-- REFERENCE BOOTSTRAP bootswatch.com/cerulean -->
