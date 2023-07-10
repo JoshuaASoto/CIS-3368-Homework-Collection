@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/css/mdb.dark.min.css" type="text/css" />
+  </head>
+<h1>Welcome to the home page!</h1>
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <div class="text-center">
+        <h3>Who doesn't love bread?</h3>
+    </div>
+    <!-- 3 notes with the bread and their names -->
+    <main>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="https://www.oliviascuisine.com/wp-content/uploads/2016/10/dulce-de-leche-crepes.jpg" class="card-img-top" alt="Wild Landscape"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Dulce De Leche Crepes</h5>
+                    <p class="card-text">
+                    A french desert with a Argetinian twist, both light and sweet.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="https://dailycookingquest.com/img/2017/06/taro-swirl-bread4.jpg" class="card-img-top" alt="Wild Landscape"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Taro Swirl</h5>
+                    <p class="card-text">
+                        A Taiwanese sweet bread filled with signature taro paste and powdered sugar on top.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="https://preppykitchen.com/wp-content/uploads/2021/02/Beignets-Feature.jpg" class="card-img-top" alt="Wild Landscape"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Beignets</h5>
+                    <p class="card-text">
+                        A deep-fried pastry made from pâte à choux, the beignet works for any meal and any occasion.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>
